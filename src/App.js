@@ -6,6 +6,7 @@ import './App.css';
 
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
+import { Hero } from './components/UI/Hero'
 
 function App() {
 
@@ -18,7 +19,9 @@ function App() {
 
     <>
       <Header />
-      <main></main>
+      <main>
+        <Hero />
+      </main>
       <Footer />
     </>
 
