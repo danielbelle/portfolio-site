@@ -6,8 +6,9 @@ const Modal = ({ activeID, setShowModal }) => {
   const portfolio = portfolios.find(portfolio => portfolio.id === activeID)
 
   return (
-    <div className='w-full h-full fixed top-0 left-0 z-10 bg-headingColor bg-opacity-40'>
-      <div className='max-w-[600px] absolute top-1/2 left-1/2 z-20 bg-white rounded-[8px] transform -translate-x-1/2 -translate-y-1/2 p-5'>
+    <div onClick={() => setShowModal(false)}
+      className='w-full h-full fixed top-0 left-0 z-10 bg-headingColor bg-opacity-40 sticky__portfolio'>
+      <div className='w-11/12 md:max-w-[600px] md:w-full absolute top-1/2 left-1/2 z-20 bg-white rounded-[8px] transform -translate-x-1/2 -translate-y-1/2 p-5'>
         <div>
           <figure>
             <img className='rounded-[8px]' src={portfolio.imgUrl} alt=''></img>
@@ -23,7 +24,7 @@ const Modal = ({ activeID, setShowModal }) => {
             {portfolio.description}
           </p>
 
-          <div className='mt-5 flex items-center gap-3 flex-wrap'>
+          <div className='mt-2 flex items-center gap-3 flex-wrap'>
             <h4 className='text-headingColor text-[18px] text-[700]'>
               Technologies
             </h4>
@@ -37,8 +38,8 @@ const Modal = ({ activeID, setShowModal }) => {
             }
           </div>
 
-          <a href={portfolio.siteUrl}>
-            <button className="bg-primaryColor text-white py-2 px-4 my-8 rounded-[8px] font-[500] hover:bg-headingColor ease-in duration-300">
+          <a href={portfolio.siteUrl} target='_blank'>
+            <button className="bg-primaryColor text-white py-2 px-4 my-8 rounded-[8px] font-[500] hover:bg-headingColor ease-in duration-300 ">
               Live Site
             </button>
           </a>
