@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Aos from 'aos';
-
 
 import './App.css';
 
@@ -11,12 +10,18 @@ import { Services } from './components/UI/Services';
 import Portfolio from './components/UI/Portfolio';
 import Contact from './components/UI/Contact';
 
+//import api from './Api.js';
+//import axios from 'axios';
+
 function App() {
 
+  const [names, setNames] = useState([]);
 
   useEffect(() => {
     Aos.init();
   }, []);
+
+
 
   return (
 
